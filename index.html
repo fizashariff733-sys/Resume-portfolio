@@ -1,92 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiza Shariff - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fiza Shariff — Portfolio</title>
+  <meta name="description" content="Portfolio of Fiza Shariff — Front-end & UI/UX enthusiast" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-      margin: 10px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #4CAF50;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 5px 0;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #333;
-      color: white;
-      margin-top: 20px;
-    }
-    a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
+    :root{--accent:#6c63ff;--bg:#f7f7fb;--card:#ffffff;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter,Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#4b47c8 0%,#6c63ff 100%);color:#fff;padding:32px 20px}
+    .container{max-width:900px;margin:0 auto;padding:24px}
+    .hero{display:flex;gap:20px;align-items:center}
+    .hero .name{font-size:28px;font-weight:700;margin:0}
+    .hero .tag{margin:6px 0 0;color:rgba(255,255,255,0.92)}
+    nav{margin-top:12px}
+    nav a{color:rgba(255,255,255,0.95);margin-right:18px;text-decoration:none;font-weight:600}
+
+    main{padding:30px 20px}
+    section{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,50,0.06);margin-bottom:18px}
+    h2{margin-top:0}
+
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .skills ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    .skills li{background:#eef; color:var(--accent);padding:6px 10px;border-radius:6px;font-weight:600;font-size:14px}
+
+    .contact p{margin:6px 0;color:var(--muted)}
+    .projects .card{padding:12px;border-radius:8px;background:#fafafa;margin-bottom:10px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+
+    footer{padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:800px){.two-col{grid-template-columns:1fr}nav{margin-top:10px}}
   </style>
 </head>
 <body>
   <header>
-    <h1>Fiza Shariff</h1>
-    <p>UI/UX Developer | Frontend Enthusiast</p>
+    <div class="container">
+      <div class="hero">
+        <div>
+          <h1 class="name">Fiza Shariff</h1>
+          <div class="tag">Front-end Developer • UI/UX Enthusiast</div>
+        </div>
+        <div style="margin-left:auto;text-align:right">
+          <div style="font-weight:700">Contact</div>
+          <div style="margin-top:6px">📞 <a href="tel:+916363489474" style="color:inherit;text-decoration:none">+91-6363489474</a></div>
+          <div>✉️ <a href="mailto:fizashariff733@gmail.com" style="color:inherit;text-decoration:none">fizashariff733@gmail.com</a></div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am enthusiastic, adaptable, and eager to learn. I have completed a UI/UX Development Certificate and internship, and I am passionate about building user-friendly interfaces and websites.
-    </p>
-  </section>
+  <main class="container">
+    <div class="two-col">
+      <div>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>Hi — I’m <strong>Fiza Shariff</strong>. I build simple, clean web pages using HTML, CSS and JavaScript and I enjoy learning UI/UX design principles. I completed a 90‑hour UI/UX internship and a UI/UX Development certificate from RankBook (NSDC).</p>
+          <p style="margin-top:8px;color:var(--muted)">Languages: Hindi | English | Kannada</p>
+        </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript, React</li>
-      <li>UI/UX Principles, Redux, Webpack</li>
-      <li>Java, Python, Data Structures</li>
-      <li>MS Office (Excel, PowerPoint)</li>
-      <li>Git/GitHub, KPO, BPO (Non-Voice), Operations</li>
-    </ul>
-  </section>
+        <section id="projects" class="projects">
+          <h2>Projects</h2>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><b>Portfolio Website</b> - This website showcasing my work and skills.</li>
-    </ul>
-  </section>
+          <div class="card">
+            <h3 style="margin:6px 0">Personal Portfolio Website</h3>
+            <p style="margin:6px 0;color:var(--muted)">A one‑page portfolio built with semantic HTML5 and CSS3 to showcase skills and projects. Includes navigation and responsive layout.</p>
+            <p style="margin:6px 0"><strong>Highlights:</strong> semantic HTML5, responsive layout, modular sections.</p>
+            <!-- Replace the # with your live link once hosted -->
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn" style="background:#444;margin-left:8px" href="#">Source</a>
+          </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:fizashariff733@gmail.com">fizashariff733@gmail.com</a></p>
-    <p>Phone: +91-6363489474</p>
-  </section>
+          <div class="card">
+            <h3 style="margin:6px 0">UI/UX Internship Project (RankBook)</h3>
+            <p style="margin:6px 0;color:var(--muted)">Worked on wireframes and small UI mockups during a 90‑hour in‑office internship focused on user flows and visual design basics.</p>
+          </div>
+
+        </section>
+
+      </div>
+
+      <aside>
+        <section id="skills" class="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>MS Office</li>
+            <li>Excel</li>
+            <li>PowerPoint</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:14px" class="contact" id="contact">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:fizashariff733@gmail.com">fizashariff733@gmail.com</a></p>
+          <p>Phone: <a href="tel:+916363489474">+91-6363489474</a></p>
+          <p style="margin-top:8px;color:var(--muted)">Certificate: UI/UX Development (RankBook – NSDC, Jan 2025)</p>
+          <p style="margin-top:8px"><a class="btn" href="mailto:fizashariff733@gmail.com?subject=Portfolio%20Contact">Email Me</a></p>
+        </section>
+      </aside>
+    </div>
+
+    <section style="text-align:center">
+      <h2>Resume Summary</h2>
+      <p style="color:var(--muted)">Front-end developer familiar with HTML, CSS and JavaScript, with UI/UX training and practical internship experience. Seeking junior front-end or UI/UX roles to apply learned skills and grow professionally.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Fiza Shariff | Portfolio</p>
+    <div class="container">© 2025 Fiza Shariff • Built with HTML & CSS</div>
   </footer>
+
+  <script>
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});} 
+      });
+    });
+  </script>
 </body>
 </html>
